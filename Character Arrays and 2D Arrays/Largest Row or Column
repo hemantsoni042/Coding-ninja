@@ -1,0 +1,40 @@
+void findLargest(int **input, int n, int m)
+{
+    //Write your code here
+    int sR=0,sC=0,tempr=0,tempc=0,r=0,c=0,i,j;
+    for(i=0;i<n;i++)
+    {
+        
+        for(j=0,sR=0;j<m;j++)
+        {
+            sR = sR + input[i][j];
+        } 
+        if(tempr < sR)
+        {
+            tempr = sR;
+            r = i;
+        }
+    }
+    for(i=0;i<m;i++)
+    {
+        for(j=0,sC=0;j<n;j++)
+        {
+           sC = sC + input[j][i];
+        }
+        if(tempc < sC)
+        {
+            tempc = sC;
+            c = i;
+        }
+    }
+    if(n == 0 && m == 0)
+        cout<<"row 0 -2147483648";
+    else
+    if(tempr < tempc)
+        cout<<"column "<<c<<" "<<tempc;
+    else
+        cout<<"row "<<r<<" "<<tempr;
+    
+    // cout<<"   "<<tempr<<"  "<<r<<"   "<<tempc<<"  "<<c;
+        
+}
