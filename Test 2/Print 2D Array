@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+void print2DArray(int **ar, int n, int m) {
+	// Write your code here
+     int i,j,k,l;
+     k = n;
+    
+    for(i=0;i<n;i++,k--)
+    {
+        for(l=k-1;l>=0;l--)
+        {
+           for(j=0;j<m;j++)
+           {
+              cout<<ar[i][j]<<" ";   
+           }
+           cout<<endl;
+        }
+    }
+    
+}
+
+
