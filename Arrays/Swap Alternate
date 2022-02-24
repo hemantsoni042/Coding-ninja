@@ -1,0 +1,16 @@
+void swapAlternate(int *arr, int n)
+{
+    //Write your code here
+    int i,prev,next;
+    for(i=0;i<n;i++)
+    {
+        if(i%2 == 0)
+            prev = arr[i];
+        else
+        {
+            next = arr[i];
+            arr[i] = prev;
+            arr[i-1] = next;
+        }
+    }
+}
