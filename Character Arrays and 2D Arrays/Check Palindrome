@@ -1,0 +1,12 @@
+bool checkPalindrome(char str[]) {
+    // Write your code here
+    int i,j;
+    for(i=0,j=0;str[i]!='\0';i++,j++);
+        // cout<<j;
+    for(i=0,j--;i<=j;i++,j--)
+    {
+        if(str[i] != str[j])
+            return false;            
+    }
+    return true;
+}
