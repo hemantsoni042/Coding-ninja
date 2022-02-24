@@ -1,0 +1,20 @@
+void bubbleSort(int *ar, int n)
+{
+    //Write your code here
+    int i=0,temp,j;
+    while (i < n)
+    {
+        j = 0;
+        while (j < (n - i - 1))
+        {
+            if (ar[j + 1] < ar[j])
+            {
+                temp = ar[j];
+                ar[j] = ar[j + 1];
+                ar[j + 1] = temp;
+            }
+            j++;
+        }
+        i++;
+    }
+}
