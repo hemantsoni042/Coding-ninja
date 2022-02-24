@@ -1,0 +1,21 @@
+int duplicateNumber(int *arr, int n)
+{
+    //Write your code here
+    int i,j,c;
+    if(n == 1)
+        i=0;
+    else
+    for(i=0;i<n;i++)
+    {
+        for(j=1,c=0;j < n;j++)
+        {
+            if(j == i && i != 0)
+                continue;
+            if(arr[i] == arr[j])
+                  c++;
+        }
+        if(c==1)
+            break;
+    }
+    return arr[i];
+}
