@@ -1,0 +1,24 @@
+void wavePrint(int **input, int nRows, int mCols)
+{
+    //Write your code here
+    int i,j;
+    for(i=0;i<mCols;i++)
+    {
+        if(i%2)
+        {
+          for(j=nRows-1;j>=0;j--)
+          {
+              cout<<input[j][i]<<" ";
+          }
+        }
+        else
+        {
+          
+          for(j=0;j<nRows;j++)
+          {
+              cout<<input[j][i]<<" ";
+          }
+        }
+    }
+    // cout<<"hello";
+}
