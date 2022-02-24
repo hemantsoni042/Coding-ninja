@@ -1,0 +1,24 @@
+int tripletSum(int *input, int n, int x)
+{
+	//Write your code here
+    int i,j,c=0;
+    
+    for(i=0;i<(n-2);i++)
+    {
+        for(j=i+1;j<(n-1);j++)
+        {
+            if(i == j)
+                continue;
+            for(int k=j+1;k<n;k++)
+            {
+                if(i == j == k)
+                    continue;
+                if(input[i] + input[j] + input[k] == x)
+                c++;
+            }
+             // input[j] = -9999;
+        }
+        input[i] = -9999;
+    }
+    return c;
+}
