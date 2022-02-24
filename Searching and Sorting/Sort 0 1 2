@@ -1,0 +1,23 @@
+void sort012(int *ar, int n)
+{
+    //Write your code here
+    int iz=0,it=n-1,i,j,temp;
+    for(i=0;i<(it+1);i++)
+    {
+        if(ar[i] == 0)
+        {
+            temp = ar[iz];
+            ar[iz] = ar[i];
+            ar[i] = temp;
+            iz++;
+        }
+        else if(ar[i] == 2)
+        {
+            temp = ar[it];
+            ar[it] = ar[i];
+            ar[i] = temp;
+            i--;
+            it--;
+        }else;
+    }
+}
