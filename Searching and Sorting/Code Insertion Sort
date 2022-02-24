@@ -1,0 +1,17 @@
+void insertionSort(int *ar, int n)
+{
+    //Write your code here
+    int i,j,temp;
+    for(i=2;i<n;i++)
+    {
+        for(j=0;j<=i;j++)
+        {
+            if(ar[j] > ar[i])
+            {
+                temp = ar[i];
+                ar[i] = ar[j];
+                ar[j] = temp;
+            }
+        }
+    }
+}
