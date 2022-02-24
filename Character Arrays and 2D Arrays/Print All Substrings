@@ -1,0 +1,15 @@
+void printSubstrings(char ch[]) {
+    // Write your code here
+    int i,j,k;
+    for(i=0;ch[i] != '\0';i++)
+    {
+        for(j=i;ch[j] != '\0';j++)
+        {
+           for(k=i;k<=j;k++)
+           {
+              cout<<ch[k];
+           }
+        cout<<endl;
+        }
+    }
+}
