@@ -1,0 +1,40 @@
+void spiralPrint(int **input, int m, int n)
+{
+    //Write your code here
+    int ce=n-1,re=m-1,ci=0,ri=0,count=0,i;
+    
+    
+    while(count != (m*n))
+    {
+        for(i=ri;(i<=ce && count != (m*n));i++)
+        {
+            cout<<input[ri][i]<<" ";
+            count++;
+        }
+    
+        ri++;
+    
+        for(i=ri;(i<=re && count != (m*n));i++)
+        {
+            cout<<input[i][ce]<<" ";
+            count++;
+        }
+        
+        ce--;
+    
+        for(i=ce;(i!=(ri-2) && count != (m*n));i--)
+        {
+            cout<<input[re][i]<<" ";
+            count++;
+        }
+    
+        re--;
+    
+        for(i=re;(i!=(ri-1) && count != (m*n));i--)
+        {
+            cout<<input[i][ci]<<" ";
+            count++;
+        }
+        ci++;
+     }
+}
