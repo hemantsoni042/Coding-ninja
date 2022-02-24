@@ -1,0 +1,42 @@
+int findSecondLargest(int *ar, int n)
+{
+    //Write your code here
+    
+    // Write your code here
+    int i=0,sl,l=0,c = 0;
+    int min = -2147483648;
+    
+    if(n==0 || n==1)
+        return min;
+    else
+    {
+        if(ar[0] < ar[1])
+        {
+            l = ar[1];
+            sl = ar[0];
+        }else
+        {
+            l = ar[0];
+            sl = ar[1];
+        }
+        for(i=2;i<n;i++)
+        {
+            if(l < ar[i])
+            {
+                sl=l;
+                l = ar[i];
+            }
+            if(sl == ar[i])
+                c++;
+            if(sl < ar[i] && l != ar[i])
+                sl = ar[i];
+        }
+        if(c >= n/2)
+            return min;
+        else
+            return sl;
+    }
+
+
+
+}
