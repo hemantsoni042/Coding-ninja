@@ -1,0 +1,26 @@
+string getCompressedString(string &input) {
+    // Write your code here.
+    int i,next,c;
+    i = 0;
+    next = 0;
+    string cinput = "";
+    while(input[i] != '\0')
+    {
+        while((input[next] != '\0') && (input[next] == input[i]))
+        {
+            next++;
+        }
+        c = next - i;
+        if(c != 1){
+            cinput += input[i];
+            cinput += char(c + 48);
+        }
+        else
+        {
+            cinput += input[i];
+        }
+        i = next;
+    }
+    
+    return cinput;
+}
